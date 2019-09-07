@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  server:
+    image: yoku0825/anemoeater:latest
+    ports:
+      - "8000:80"
+  client:
+    build:
+      context: .
+    image: pddg/anemoeater-client:latest
+    volumes:
+      - "./logs:/logs"
+    environment:
+      ANEMOMETER_DB_HOST: server
+      ANEMOMETER_DB_USER: anemometer
+      ANEMOMETER_DB_PORT: 3306
+      ANEMOMETER_DB_PASS: ""
+      ANEMOMETER_CELL: 1
+    depends_on:
+      - server
