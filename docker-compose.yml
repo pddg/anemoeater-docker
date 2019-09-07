@@ -6,8 +6,6 @@ services:
     ports:
       - "8000:80"
   client:
-    build:
-      context: .
     image: pddg/anemoeater-client:latest
     volumes:
       - "./logs:/logs"
