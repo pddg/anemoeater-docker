@@ -4,7 +4,7 @@ services:
   server:
     image: yoku0825/anemoeater:latest
     ports:
-      - "8000:80"
+      - "8080:80"
   client:
     image: pddg/anemoeater-client:latest
     volumes:

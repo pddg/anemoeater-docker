@@ -5,7 +5,7 @@ build:
 
 up:
 	docker-compose up -d
-	@echo "Open http://127.0.0.1:8000/anemometer/"
+	@echo "Open http://127.0.0.1:8080/anemometer/"
 
 stop:
 	docker-compose stop
